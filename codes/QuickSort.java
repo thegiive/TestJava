@@ -1,11 +1,16 @@
+package codes; 
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
+
+
 public class QuickSort {
-    
+
+ 
+
     public static int[] sort(int[] input_arr){
         if(input_arr.length <= 1)return input_arr;
         if(input_arr[0] == 0) return input_arr ; 
@@ -41,5 +46,8 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] a = {3,2,5,1,4}; 
         System.out.println(Arrays.toString(sort(a)));
+        // org.junit.runner.JUnitCore.main("tests.JavaTest");
     }
 }
+
+

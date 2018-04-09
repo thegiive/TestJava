@@ -10,25 +10,6 @@ public class InsertSort {
     static void insertionSort1(int n, int[] arr) {
         // Complete this function
         // for(int index = arr.length -1 ; index > 0 ; index--){
-            int pivot = arr[n -1]; 
-            boolean pivorInsertIntoArray = false ; 
-            for(int i = n - 1 -1  ; i >= 0 ; i -- ){
-                if(pivot < arr[i]){
-                    //shift 
-                    arr[i+1] = arr[i]; 
-                    // System.out.println(Arrays.toString(arr));
-                    printArr(arr);
-                }else{
-                    arr[i+1]  = pivot ; 
-                    pivorInsertIntoArray = true ; 
-                    printArr(arr);
-                    break ; 
-                }
-            }
-            if(!pivorInsertIntoArray){
-                arr[0] = pivot ; 
-                printArr(arr);
-            } 
         // }
     }
 

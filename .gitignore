@@ -1,3 +1,4 @@
 *.class 
 new_proj/target/*
 .classpath
+target/*

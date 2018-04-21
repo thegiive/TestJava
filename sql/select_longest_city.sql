@@ -18,5 +18,9 @@ SELECT DISTINCT CITY FROM STATION WHERE LEFT(CITY , 1) not in ('a','e','i','o','
 SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) not in ('a','e','i','o','u');
 
 -- Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) not in ('a','e','i','o','u') or LEFT(CITY , 1) not in ('a','e','i','o','u'); 
+
+-- Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
 SELECT DISTINCT CITY FROM STATION WHERE RIGHT(CITY,1) not in ('a','e','i','o','u') and LEFT(CITY , 1) not in ('a','e','i','o','u'); 
+
 

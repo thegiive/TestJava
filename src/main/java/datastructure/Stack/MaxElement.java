@@ -6,42 +6,42 @@ import java.util.*;
 import java.util.regex.*;
 
 public class MaxElement{
-    public int[] arr ; 
-    public int curr_offset ; 
-    public int max ; 
+
+    class Node{
+        int value ; 
+        int max ; 
+        Node(int v){
+            value = v ; 
+        }
+    }
+
+    private Stack<Node> st ; 
+    // private int max ; 
     
     MaxElement(int number){
-        arr = new int[number];
-        curr_offset = -1 ; 
-        max = Integer.MIN_VALUE ; 
+        st = new Stack<Node>(); 
+        // max = Integer.MIN_VALUE ; 
     }
 
     public void push(int input){
-        if(curr_offset+1 >= arr.length) return ; 
-        arr[++curr_offset] = input ; 
-        if(input >= max){
-            max = input; 
-        }
+        Node n = new Node(input); 
+        int curr_max = Math.max(input , findMax()) ; 
+        n.max = curr_max ; 
+        st.push(n); 
     } 
 
     public void delete(){
-        if(arr[curr_offset] == max) max = findMax(curr_offset-1); 
-        curr_offset -- ; 
+        st.pop(); 
     }
 
     public int findMax(){
-        return max ; 
+        if(st.isEmpty()){
+            return Integer.MIN_VALUE; 
+        }else{
+            return st.peek().max ; 
+        }
     }
 
-    public int findMax(int offset){
-        int tmp = Integer.MIN_VALUE; 
-        for(int i = 0 ; i <= offset ; i++){
-            if(tmp < arr[i]){
-                tmp = arr[i]; 
-            }
-        }
-        return tmp ; 
-    }
 
     private static final Scanner scanner = new Scanner(System.in);
 

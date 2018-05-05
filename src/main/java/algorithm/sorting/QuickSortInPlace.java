@@ -41,7 +41,7 @@ public class QuickSortInPlace {
         for(int i = 0 ; i< arr.length ; i++){
             result += arr[i]+" ";             
         }
-        System.out.println(result);
+        // System.out.println(result);
 
         if(less_arr_length > 1 )  arr = quicksort(arr, less_arr_index, less_arr_index+less_arr_length -1 ); 
         if(large_arr_length > 1 )  arr = quicksort(arr, large_arr_index , large_arr_index+large_arr_length -1); 

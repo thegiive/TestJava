@@ -11,7 +11,7 @@ public class MergeSort {
     public static void sort(int[] arr, int start_index , int end_index){
         if(start_index < end_index){
             int middle_index = start_index + ( end_index - start_index ) /2 ; 
-            System.out.println(start_index+" "+end_index+" "+middle_index);
+            // System.out.println(start_index+" "+end_index+" "+middle_index);
             sort(arr, start_index, middle_index);
             sort(arr, middle_index+1, end_index);
             merge(arr,start_index , middle_index ,end_index); 
@@ -19,7 +19,7 @@ public class MergeSort {
     }
 
     public static void merge(int[] arr, int start_index , int middle_index , int end_index){
-        System.out.println("Merge "+Arrays.toString(arr)+" "+start_index+" "+middle_index+" "+end_index);
+        // System.out.println("Merge "+Arrays.toString(arr)+" "+start_index+" "+middle_index+" "+end_index);
         int[] helper_arr = new int[arr.length]; 
         for(int i = 0 ; i < arr.length ; i++){
             helper_arr[i] = arr[i]; 
@@ -43,7 +43,7 @@ public class MergeSort {
                 current_merged_arr_index ++ ;  
             }
         }
-        System.out.println("END "+ Arrays.toString(arr)+" "+start_index+" "+middle_index+" "+end_index);
+        // System.out.println("END "+ Arrays.toString(arr)+" "+start_index+" "+middle_index+" "+end_index);
 
     }
 

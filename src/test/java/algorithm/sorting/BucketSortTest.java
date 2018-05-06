@@ -20,7 +20,7 @@ public class BucketSortTest extends TestCase {
    public void test2(){
     int[] arr = {1,2,1}; 
     int[] result = BucketSort.bucketSortResult(arr);
-    System.out.println(Arrays.toString(result)); 
+    // System.out.println(Arrays.toString(result)); 
     assertEquals("[1, 1, 2]", Arrays.toString(result) );
 }
 

@@ -17,14 +17,14 @@ public class MergeSortTest extends TestCase {
    public void test2(){
     int[] arr = {3,1,2}; 
     MergeSort.sort(arr, 0, arr.length-1);
-    System.out.println(Arrays.toString(arr));
+    // System.out.println(Arrays.toString(arr));
     assertEquals( "[1, 2, 3]" , Arrays.toString( arr ) );
 }
 
 public void test3(){
     int[] arr = {7,3,5,1,2}; 
     MergeSort.sort(arr, 0, arr.length-1);
-    System.out.println(Arrays.toString(arr));
+    // System.out.println(Arrays.toString(arr));
     assertEquals( "[1, 2, 3, 5, 7]" , Arrays.toString( arr ) );
 }
 

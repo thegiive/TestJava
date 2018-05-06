@@ -15,6 +15,6 @@ public class QuickSortTest extends TestCase {
       double result= value1 + value2;
       assertTrue(result == 6);
       int[] a = {1,3,2}; 
-      System.out.println(Arrays.toString(QuickSort.sort(a)));
+    //   System.out.println(Arrays.toString(QuickSort.sort(a)));
    }
 }

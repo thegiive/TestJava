@@ -1,6 +1,6 @@
 package algorithm.tree;
 
-
+//for Trie algorithm
 public class TrieNode{
     TrieNode[] child_arr ;
     int count ;

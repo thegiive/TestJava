@@ -8,7 +8,7 @@ public class TrieNodeTest extends TestCase {
     TrieNode n1 ;
     protected  void setUp(){
         n1 = new TrieNode() ;
-        debug = true ;
+//        debug = true ;
     }
 
     public void testToString1(){

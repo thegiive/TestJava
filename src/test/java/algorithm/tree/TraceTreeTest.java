@@ -34,5 +34,19 @@ public class TraceTreeTest extends TestCase {
         assertEquals( "5 2 1 3 6 " , TraceTree.postOrder(n5) ) ;
     }
 
+    public void test11(){
+        assertEquals( "1 2 3 5 6 " , TreeTrace1.inOrder(n5) ) ;
+        assertEquals( "6 " , TreeTrace1.inOrder(n6) ) ;
+        assertEquals( "1 2 3 " , TreeTrace1.inOrder(n2) ) ;
+    }
+
+    public void test21(){
+        assertEquals( "1 3 2 6 5 " , TreeTrace1.preOrder(n5) ) ;
+    }
+
+    public void test31(){
+        assertEquals( "5 2 1 3 6 " , TreeTrace1.postOrder(n5) ) ;
+    }
+
 
 }

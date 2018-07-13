@@ -17,4 +17,10 @@ public class QuickSortTest extends TestCase {
       int[] a = {1,3,2}; 
     //   System.out.println(Arrays.toString(QuickSort.sort(a)));
    }
+
+   public void test31(){
+    int[] arr = { 1,9,3,7,6,5} ; 
+    assertEquals("[1, 3, 5, 6, 7, 9]", Arrays.toString(QuickSort.qsort(arr, 0 , arr.length-1)));
+}
+
 }

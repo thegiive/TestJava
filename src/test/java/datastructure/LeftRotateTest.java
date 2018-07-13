@@ -17,4 +17,10 @@ public class LeftRotateTest extends TestCase {
     assertEquals( Arrays.toString( LeftRotate.leftRotate(arr, 8) ) , "[4, 5, 1, 2, 3]"); 
 }
 
+    public void test3(){
+        int[] arr = {1,2,3,4,5}; 
+        System.out.println(Arrays.toString( LeftRotate1.rotate(arr, 2)));
+        assertEquals(Arrays.toString(LeftRotate1.rotate(arr, 2)), "[3, 4, 5, 1, 2]");
+    }
+
 }

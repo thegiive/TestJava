@@ -9,6 +9,49 @@ import java.util.regex.*;
 
 public class QuickSort {
 
+    // public static int[] qsort(int[] input_arr){
+    // }
+
+    public static int[] qsort(int[] input_arr , int start_index , int end_index){
+
+        if(start_index == end_index ) return input_arr; 
+        int pivot = input_arr[end_index]; 
+        int small_arr_index = start_index ; 
+        int small_arr_length = 0 ; 
+        int larger_arr_index = start_index ; 
+        int larger_arr_length = 0 ; 
+
+        for(int i = start_index ; i < end_index  ; i++){
+            if(input_arr[i] <= pivot ){
+                if(larger_arr_length <= 0 ){
+                    larger_arr_index ++ ; 
+                    small_arr_length ++ ; 
+                }else{
+                    swap(input_arr, i, larger_arr_index);
+                    larger_arr_index ++ ; 
+                    small_arr_length ++ ; 
+                }
+            }else{
+                larger_arr_length ++ ; 
+            }
+        }
+
+        if(larger_arr_length > 0)swap(input_arr, end_index, larger_arr_index);
+        larger_arr_index++ ; 
+
+
+        if(small_arr_length > 1 )qsort(input_arr, small_arr_index, small_arr_index+small_arr_length-1);
+        if(larger_arr_length > 1 )qsort(input_arr, larger_arr_index, larger_arr_index+larger_arr_length-1);
+
+        return input_arr ; 
+    }
+
+    public static void swap(int[] input_arr , int index_a , int index_b){
+        int tmp = input_arr[index_a] ; 
+        input_arr[index_a] = input_arr[index_b] ; 
+        input_arr[index_b] = tmp ; 
+    }
+
  
 
     public static int[] sort(int[] input_arr){

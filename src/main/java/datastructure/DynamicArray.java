@@ -6,12 +6,12 @@ import java.util.List;
 import java.util.Queue;
 
 public class DynamicArray {
-    static ArrayList<Integer>[] seq_arr ;
+//    static ArrayList<Integer>[] seq_arr ;
 
     // Complete the dynamicArray function below.
     static List<Integer> dynamicArray(int n, List<List<Integer>> queries) {
         int lastAnswer = 0 ;
-        seq_arr = new ArrayList[n];
+        ArrayList<Integer>[] seq_arr = new ArrayList[n];
         List<Integer> result = new LinkedList<Integer>();
 
         for(int i = 0 ; i< n ; i++){

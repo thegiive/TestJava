@@ -3,18 +3,17 @@ import java.util.*;
 
 public class LeftRotate  {
 
-    public static int[] leftRotate(int[] input_arr , int n){
-        int offset = n % input_arr.length ; 
-        int[] tmp_arr = new int[input_arr.length]; 
-        for(int i = 0 ; i< input_arr.length ; i++){
-            int j = i - offset; 
-            if(i - offset<0) j = j+input_arr.length ; 
-            tmp_arr[j] = input_arr[i]; 
+
+    public static int[] leftRotate(int[] input_arr , int n) {
+        int[] result_arr = new int[input_arr.length];
+        for(int i = 0 ; i < input_arr.length ; i ++){
+            int new_index =(i+input_arr.length-(n%input_arr.length) ) % input_arr.length;
+            result_arr[new_index] = input_arr[i] ;
         }
-        return tmp_arr ; 
+        return result_arr;
     }
 
-    private static final Scanner scan = new Scanner(System.in);
+        private static final Scanner scan = new Scanner(System.in);
 
     public static void main(String[] args) {
         // String[] nd = scan.nextLine().split(" ");

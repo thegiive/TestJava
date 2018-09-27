@@ -56,16 +56,17 @@ public class DetechCycle {
         }
 
     static boolean hasCycle(SinglyLinkedListNode head) {
-            SinglyLinkedListNode fasterNode = head ;
+            if(head == null) return false ;
 
-            while(fasterNode != null) {
-                if(fasterNode.data == head.data) return true ;
-                if(head.next != null) {
-                    fasterNode = head.next.next;
+            SinglyLinkedListNode fasterNode = head;
+
+            while(fasterNode != null && fasterNode.next != null){
+
+                    fasterNode = fasterNode.next.next;
                     head = head.next ;
-                }else {
-                    return false ;
-                }
+
+                    if(fasterNode == head) return true ;
+
             }
             return false ;
 
@@ -108,4 +109,3 @@ public class DetechCycle {
 }
 
 
-}

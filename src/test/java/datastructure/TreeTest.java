@@ -36,4 +36,21 @@ public class TreeTest extends TestCase {
 
     }
 
+
+    public void testPostOrder() {
+        Node n1 = new Node(1);
+        Node n2 = new Node(2);
+        Node n3 = new Node(3);
+        Node n4 = new Node(4);
+        Node n5 = new Node(5);
+
+        n3.left = n2 ;
+        n2.left = n1 ;
+        n3.right = n4 ;
+        n4.right = n5 ;
+
+        assertEquals("1 2 5 4 3 " , Tree.postOrder(n3));
+
+    }
+
 }

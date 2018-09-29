@@ -38,6 +38,17 @@ public class Tree {
 
     }
 
+    public static String postOrder(Node root) {
+        if(root == null) return "";
+        String result = "";
+        if(root.left != null) result+= postOrder(root.left);
+        if(root.right!= null) result+= postOrder(root.right);
+        result += root.data+ " ";
+        return  result ;
+
+    }
+
+
 
     public static Node insert(Node root, int data) {
         if(root == null) {

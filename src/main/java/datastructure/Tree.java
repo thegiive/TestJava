@@ -28,6 +28,17 @@ public class Tree {
 
     }
 
+    public static String inOrder(Node root) {
+        if(root == null) return "";
+        String result = "";
+        if(root.left != null) result+= inOrder(root.left);
+        result += root.data+ " ";
+        if(root.right!= null) result+= inOrder(root.right);
+        return  result ;
+
+    }
+
+
     public static Node insert(Node root, int data) {
         if(root == null) {
             return new Node(data);

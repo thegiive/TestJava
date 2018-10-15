@@ -1,19 +1,8 @@
-package datastructure;
+package datastructure.Tree;
 
 
 import java.util.Scanner;
 
-class Node {
-    Node left;
-    Node right;
-    int data;
-
-    Node(int data) {
-        this.data = data;
-        left = null;
-        right = null;
-    }
-}
 
 public class Tree {
 
